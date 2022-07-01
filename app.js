@@ -1,35 +1,31 @@
-let oneEuroIs = { // one euro is:
-    "JPY": 127.9, // japan yen
-    "USD": 1.2, // us dollar
-    "GBP": 0.8, // british pound
+// we declare the function with the exact name "fromEuroToDollar"
+const fromEuroToDollar = function(valueInEuro) {
+    // convert the given valueInEuro to dollars
+    let valueInDollar = valueInEuro * 1.2;
+    //return the dollar value
+    return valueInDollar;
 }
-const fromEuroToDollar = function(valueInEuro){ // we declare the function with the exact name "fromEuroToDollar"
-    let valueInDollar = valueInEuro * 1.2;     // convert the given valueInEuro to dollars
-    return valueInDollar;     //return the Dollar value
-}
-
-const fromDollarToYen = function(valueInYen){ // we declare the function with the exact name "fromDollarToYen"
-    let valueInYen = valueInYen * 127.9;     // convert the given valueInDollar to Yen
-    return valueInYen;     //return the Yen value
+const fromDollarToYen = function(valueInDollar) {
+    let valueInYen = (valueInDollar / 1.2) * 127.9;
+    return valueInYen;
 }
 
-const fromYenToPound = function(valueInYen){ // we declare the function with the exact name "fromYenToPound"
-    let valueInYen = valueInPound * 0.8;     // convert the given valueInYen to Pounds
-    return valueInYen;     //return the yen value
+const fromYenToPound = function(valueInYen) {
+    let valueInPound = (valueInYen / 127.9) * .8
+    return valueInPound;
 }
 
 // this is my function that sums two numbers
-const sum = (a,b) => {
+const sum = (a, b) => {
     return a + b
 }
 
 // just a console log for ourselves.
-console.log(sum(7,3))
+console.log(sum(7, 3));
 
-// export the function to be used on other files 
+
+// export the function to be used on other files
 // (similar to the keyword `export` when using webpack)
-module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
+module.exports = { sum, fromEuroToDollar, fromYenToPound, fromDollarToYen };
 
-
-/* ------- */
 
