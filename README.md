@@ -1,4 +1,4 @@
-# Unit testing with Jest
+# Unit testing with Jest (Jose Hurtado)
 
 ```
 Important: 💻  This exercise is interactive.
